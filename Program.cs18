@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections;
+
+class Customer
+{
+    private int id;
+    private string name;
+    private int telephone;
+
+    public Customer(int id, string name, int telephone)
+    {
+        this.id = id;
+        this.name = name;
+        this.telephone = telephone;
+    }
+
+
+    public void Display()
+    {
+        Console.WriteLine($"ID:{id} Name:{name} Telephone:{telephone}");
+    }
+
+
+    public static void Initialize()
+    {
+        ArrayList customerList = new ArrayList
+        {
+            new Customer(1, "Merry", 612345678),
+            new Customer(2, "John", 612345677),
+            new Customer(3, "Tim", 612345666),
+            new Customer(4, "Matt", 612345555),
+            new Customer(5, "Jeff", 612344444)
+        };
+
+        foreach (Customer customer in customerList)
+        {
+            customer.Display();
+        }
+    }
+}
+{
+    static void Main(string[] args)
+    {
+        Customer.Initialize();
+    }
+}
+
+
+
