@@ -1,2 +1,0 @@
-# progam-shit
-for me
